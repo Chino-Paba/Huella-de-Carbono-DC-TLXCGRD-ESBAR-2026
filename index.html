@@ -65,6 +65,7 @@
 
             const huellaAlimentacion = hAlim + hResiduos;
             const total = (huellaHogar + huellaTransporte + huellaAlimentacion).toFixed(1);
+            const arboles = Math.ceil(total * 50);
 
             useEffect(() => {
                 if (chartInstance.current) chartInstance.current.destroy();
@@ -176,6 +177,12 @@
                                 <div className="text-lg text-gray-500 font-medium">t CO₂e / año</div>
                             </div>
 
+                            <div className="bg-white p-6 rounded-xl shadow border border-green-200 bg-green-50 flex flex-col items-center justify-center">
+                                <h3 className="font-bold text-lg mb-2 text-green-800 flex items-center gap-2"><i className="fa-solid fa-tree text-green-600 text-xl"></i> Compensación Ecológica</h3>
+                                <div className="text-5xl font-black text-green-600 my-3">{arboles}</div>
+                                <div className="text-sm text-green-700 font-medium text-center">árboles nativos a sembrar para neutralizar tus emisiones este año</div>
+                            </div>
+
                             <div className="bg-white p-6 rounded-xl shadow border border-gray-100">
                                 <h3 className="font-bold text-lg mb-4 text-slate-800 text-center">Distribución de Emisiones</h3>
                                 <div className="h-48 w-full relative">
@@ -196,4 +203,3 @@
     </script>
 </body>
 </html>
-```
