@@ -65,7 +65,7 @@
 
             const huellaAlimentacion = hAlim + hResiduos;
             const total = (huellaHogar + huellaTransporte + huellaAlimentacion).toFixed(1);
-            const arboles = Math.ceil(total * 50);
+            const arboles = Math.ceil(total * 1000) / 22);
 
             useEffect(() => {
                 if (chartInstance.current) chartInstance.current.destroy();
